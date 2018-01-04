@@ -1,0 +1,18 @@
+.SearchBox {
+    background-color: #eeba7e;
+	height: 300px;
+	margin-top: 6px;
+	position: relative;
+}
+
+.SearchHed{
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.SearchCenter{
+	width: 60%; 
+	position: absolute;
+	top: 20%;
+	left: 20%;
+}
