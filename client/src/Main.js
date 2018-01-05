@@ -22,6 +22,7 @@ import Auth from './modules/Auth';
 
 import Landing from './pages/Landing';
 import "./components/Navbar/Navbar.css";
+import Footer from './components/Footer';
 
 // remove tap delay, essential for MaterialUI to work properly
 injectTapEventPlugin();
@@ -116,6 +117,7 @@ class Main extends Component {
             <LoggedOutRoute path="/login" component={LoginPage} toggleAuthenticateStatus={() => this.toggleAuthenticateStatus()} />
             <LoggedOutRoute path="/signup" component={SignUpPage}/>
             <Route path="/logout" component={LogoutFunction}/>
+            <Footer />
           </div>
 
         </Router>

@@ -15029,6 +15029,10 @@ var _Landing2 = _interopRequireDefault(_Landing);
 
 __webpack_require__(463);
 
+var _Footer = __webpack_require__(472);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -15102,25 +15106,6 @@ var Main = function (_Component) {
       // check authenticated status and toggle state based on that
       this.setState({ authenticated: _Auth2.default.isUserAuthenticated() });
     }
-
-    // <div className="top-bar">
-    //   <div className="top-bar-left">
-    //     <Link to="/">React App</Link>
-    //   </div>
-    //   {this.state.authenticated ? (
-    //     <div className="top-bar-right">
-    //       <Link to="/dashboard">Dashboard</Link>
-    //       <Link to="/logout">Log out</Link>
-    //     </div>
-    //   ) : (
-    //     <div className="top-bar-right">
-    //       <Link to="/login">Log in</Link>
-    //       <Link to="/signup">Sign up</Link>
-    //     </div>
-    //   )}
-    //
-    // </div>
-
   }, {
     key: 'render',
     value: function render() {
@@ -15256,7 +15241,8 @@ var Main = function (_Component) {
                 return _this2.toggleAuthenticateStatus();
               } }),
             _react2.default.createElement(LoggedOutRoute, { path: '/signup', component: _SignUpPage2.default }),
-            _react2.default.createElement(_reactRouterDom.Route, { path: '/logout', component: _LogoutFunction2.default })
+            _react2.default.createElement(_reactRouterDom.Route, { path: '/logout', component: _LogoutFunction2.default }),
+            _react2.default.createElement(_Footer2.default, null)
           )
         )
       );
@@ -18148,7 +18134,7 @@ exports = module.exports = __webpack_require__(62)(undefined);
 
 
 // module
-exports.push([module.i, ".navbar{\n  \tbackground: #486a7d;\n}\n\n.navbar a{\n  \tfont-size: 20px;\n  \tcolor: #fff;\n}\n\na:hover{\n\tcolor: #000;\n}\n", ""]);
+exports.push([module.i, ".navbar{\n  \tbackground: #486a7d;\n}\n\n.navbar a{\n  \tfont-size: 20px;\n  \tcolor: #fff;\n}\n\n.navbar-brand {\n  font-family: 'Dr Sugiyama', cursive;\n  font-size: 200% !important;\n}\n\n.navbar-nav > li > a {\n  font-size: 90% !important;\n}\n\na:hover{\n\tcolor: #000;\n}\n", ""]);
 
 // exports
 
@@ -18162,7 +18148,7 @@ exports = module.exports = __webpack_require__(62)(undefined);
 
 
 // module
-exports.push([module.i, ".SearchBox {\n    background-color: #eeba7e;\n\theight: 300px;\n\tmargin-top: 6px;\n\tposition: relative;\n}\n\n.SearchHed{\n\ttext-align: center;\n\tpadding-bottom: 10px;\n}\n\n.SearchCenter{\n\twidth: 60%; \n\tposition: absolute;\n\ttop: 20%;\n\tleft: 20%;\n}\n", ""]);
+exports.push([module.i, ".SearchBox {\n    background-color: #eeba7e;\n\theight: 300px;\n\tmargin-top: 6px;\n\tposition: relative;\n}\n\n.SearchHed{\n\ttext-align: center;\n\tpadding-bottom: 10px;\n}\n\n.SearchCenter{\n\twidth: 60%;\n\tposition: absolute;\n\ttop: 20%;\n\tleft: 20%;\n}\n", ""]);
 
 // exports
 
@@ -43069,6 +43055,106 @@ module.exports = function(module) {
 	return module;
 };
 
+
+/***/ }),
+/* 471 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(474);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Footer = function Footer() {
+	return _react2.default.createElement(
+		"div",
+		{ className: "footer" },
+		_react2.default.createElement(
+			"p",
+			null,
+			"Copyright 2018 \xA9 Cottage Connect - Brett Fuller, Conrad Harrison, Kim Kaufman, David Staas "
+		)
+	);
+};
+
+exports.default = Footer;
+
+/***/ }),
+/* 472 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _Footer = __webpack_require__(471);
+
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Footer).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 473 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(62)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".footer{\n\tbackground-color: #486a7d;\n\tmargin-top: 6px;\n}\n\n.footer p{\n\tcolor: white;\n\ttext-align: center;\n\tpadding: 15px 0;\n\tfont-size: 15px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 474 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(473);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(74)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../node_modules/css-loader/index.js!./Footer.css", function() {
+			var newContent = require("!!../../../../node_modules/css-loader/index.js!./Footer.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);

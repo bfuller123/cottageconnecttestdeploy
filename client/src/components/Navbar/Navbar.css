@@ -7,6 +7,15 @@
   	color: #fff;
 }
 
+.navbar-brand {
+  font-family: 'Dr Sugiyama', cursive;
+  font-size: 200% !important;
+}
+
+.navbar-nav > li > a {
+  font-size: 90% !important;
+}
+
 a:hover{
 	color: #000;
 }
