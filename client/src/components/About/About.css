@@ -1,23 +1,18 @@
 .AboutBox {
     background-color: #fede8a;
-	height: 400px;
+	height: 500px;
 	margin-top: 6px;
-	position: relative;
+}
+
+.col-lg-6, .col-md-8{
+	padding: 5% 5%;
 }
 
 .AboutHed{
 	text-align: center;
-	padding-bottom: 10px;
 }
 
 .AboutText{
 	text-align: center;
-	font-size: 18px;
-}
-
-.AboutCenter{
-	width: 60%; 
-	position: absolute;
-	top: 20%;
-	left: 20%;
+	font-size: 130%;
 }

@@ -1,0 +1,17 @@
+.MainHeads{
+	text-align: center;
+ 	top: 50%;
+	left: 35%;
+	position: absolute;
+}
+
+.MainH1{
+	font-size: 120px;
+	font-family: 'Dr Sugiyama', cursive;
+}
+
+.MainH2{
+	font-size: 50px;
+	font-family: 'Dr Sugiyama', cursive;
+}
+

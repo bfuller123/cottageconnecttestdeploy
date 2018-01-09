@@ -1,15 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardTitle, CardText } from 'material-ui/Card';
+import MerchantPortal from './Merchantportal';
+import API from '../modules/API';
 
-const Dashboard = ({ secretData, user }) => (
-  <Card className="container">
-    <CardTitle
-      title="Dashboard"
-      subtitle="You should get access to this page only after authentication."
-    />
-  {secretData && <CardText style={{ fontSize: '16px', color: 'green' }}>Welcome <strong>{user.name}</strong>!<br />{secretData}</CardText>}
-  </Card>
+//TODO: replace address with user.address;
+
+const Dashboard = ({ secretData, user, goods, categories, address, btnClickHandler }) => (
+  <MerchantPortal merchant={user.name} goods={goods} categories={categories} address={address} email={user.email} addGoodBtnClick={btnClickHandler} addCategoryBtnClick={btnClickHandler} submitBtnClick={btnClickHandler}/>
 );
 
 Dashboard.propTypes = {

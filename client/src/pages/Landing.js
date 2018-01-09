@@ -4,6 +4,7 @@ import About from "./../components/About";
 import Search from "./../components/Search";
 
 class Landing extends React.Component {
+
   render() {
     return (
       <div>

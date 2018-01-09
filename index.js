@@ -12,6 +12,8 @@ app.use(express.static('./server/static/'));
 app.use(express.static('./client/dist/'));
 // tell the app to parse HTTP body messages
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 // pass the passport middleware
 app.use(passport.initialize());
 
@@ -28,8 +30,12 @@ app.use('/api', authCheckMiddleware);
 // routes
 const authRoutes = require('./server/routes/auth');
 const apiRoutes = require('./server/routes/api');
+const standardRoutes = require('./server/routes/send');
+const ccRouters = require('./server/routes/cottages');
 app.use('/auth', authRoutes);
 app.use('/api', apiRoutes);
+app.use('/send', standardRoutes);
+app.use('/cc',ccRouters);
 
 // Set Port, hosting services will look for process.env.PORT
 app.set('port', (process.env.PORT || 3000));

@@ -1,4 +1,4 @@
 {
-  "dbUri": "mongodb://localhost/react_passport",
+  "dbUri": "mongodb://localhost/cottageconnect",
   "jwtSecret": "a secret phrase!!"
 }

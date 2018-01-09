@@ -1,10 +1,12 @@
 .navbar{
-  	background: #486a7d;
+  background: #486a7d;
+  margin-bottom: 0;
+  z-index: 9999;
 }
 
 .navbar a{
-  	font-size: 20px;
-  	color: #fff;
+  font-size: 20px;
+  color: #fff;
 }
 
 .navbar-brand {
@@ -17,5 +19,11 @@
 }
 
 a:hover{
-	color: #000;
+  color: #000;
+}
+
+.navbar-toggle {
+  color: #000 !important;
+	/*background: #b2d3e4;    */
+  border: 1px #fff solid;
 }

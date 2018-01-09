@@ -1,1 +1,17 @@
+/* .card {
+   padding: 4%;
+   border: 2px solid gray;
+   max-width: 350px;
+   max-height: 100px;
+   margin-top: 30px;
+ } */ 
 
+.cardImage {
+  /*float: left;*/
+  height: 100px;
+  width: 100px;
+}
+
+/* .cardDetails {
+  float: left;
+} */
