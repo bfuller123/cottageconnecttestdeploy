@@ -3,15 +3,15 @@ const mongoose = require('mongoose');
 
 
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://heroku_bx92v1q4:f6lvg45a5ulejd6mtdl6epq04u@ds161048.mlab.com:61048/heroku_bx92v1q4");
+// mongoose.connect("mongodb://heroku_bx92v1q4:f6lvg45a5ulejd6mtdl6epq04u@ds161048.mlab.com:61048/heroku_bx92v1q4");
 
 //mongoose.connect(
-// mongoose.createConnection(
-//   process.env.MONGODB_URI || "mongodb://localhost/cottageconnect",
-//   {
-//     useMongoClient: true
-//   }
-// );
+mongoose.createConnection(
+  process.env.MONGODB_URI || "mongodb://localhost/cottageconnect",
+  {
+    useMongoClient: true
+  }
+);
 
 // Defining methods for the ccController
 module.exports = {
