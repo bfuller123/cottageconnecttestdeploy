@@ -4,8 +4,14 @@ const ccController = require("../controllers/ccController");
 // Require and use the bodyParser and express to correctly intepret the JSONs
 const bodyParser = require("body-parser");
 const express = require('express');
-const app = express();	
+const app = express();
 app.use(bodyParser.json());
+
+//==========================================
+// Search for a merchant by SearchBox:
+//==========================================
+router.route("/merchants/search/:address:/:distance")
+  .get(ccController.findMerchantBySearchBox);
 
 //==========================================
 // Cottage Routes:
@@ -16,30 +22,32 @@ router.route("/merchants")
 	.get(ccController.findAllMerchants)
 	.post(ccController.createCottage);
 
+router.route("/merchants/zip/:zipCode")
+  .get(ccController.findMerchantByZip);
+
+router.route("/merchants/category/:food")
+  .get(ccController.findMerchantByFood);
+
+router.route("/merchants/search/:zipCode/:food")
+  .get(ccController.findMerchantByZipAndFood);
+
 // Matches with "/cc/customers
 router.route("/customers")
 	.get(ccController.findAllCustomers)
 	.post(ccController.createCottage);
 
-// Matches with "/cc/cottages/:id
-router.route("/cottages/:id")
-	.get(ccController.findCottageById)
-	.put(ccController.updateCottage)
-	.delete(ccController.removeCottage);
+// Matches with "/cc/cottages/update
+router.route("/cottages/update")
+	// .get(ccController.findCottageById)
+	.post(ccController.updateCottage)
+	// .delete(ccController.removeCottage);
 
-//==========================================
-// Inventory Routes:
-//==========================================
 
-// Matches with "/cc/inventories/:id
-router.route("/inventories/:id")
-	.get(ccController.findMerchantInventory)
-	.put(ccController.updateInventory)
-	.delete(ccController.removeInventory);
-
-router.route("/inventories")
-	.post(ccController.createInventory);
-
+// Matches with "/cc/cottages/load/:id
+router.route("/cottages/load/")
+	.post(ccController.findCottageById)
+	//.put(ccController.updateCottage)
+	//.delete(ccController.removeCottage);
 //==========================================
 // Category Routes:
 //==========================================

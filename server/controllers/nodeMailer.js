@@ -1,5 +1,3 @@
-import React from "react";
-
 var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
@@ -10,12 +8,6 @@ var transporter = nodemailer.createTransport({
   }
 });
 
-var mailOptions = {
-  from: 'cottageconnect001@gmail.com',
-  to: 'durinthalas@yahoo.com, kimgomizzou@gmail.com, davidstaas@icloud.com',
-  subject: 'Cottage Connect Test Message',
-  text: 'This is a Cottage Connect email using nodemailer in Node.js'
-};
 
 //  example for more than one address
 
@@ -37,12 +29,22 @@ var mailOptions = {
 // }
 
 
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-});
 
-export default nodeMailer;
+module.exports = {
+  sendMail: function(emailTo, emailFrom, emailSubject, emailBody){
+    var mailOptions = {
+      from: 'cottageconnect001@gmail.com',
+      to: emailTo,
+      subject: emailSubject,
+      text: `${emailBody} Please reach back out to me at ${emailFrom}`
+    };
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Email sent: ' + info.response);
+      }
+    });
+
+  }
+};

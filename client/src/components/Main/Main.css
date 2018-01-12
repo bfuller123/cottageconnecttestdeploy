@@ -1,22 +1,35 @@
-.MainHeads{
-	text-align: center;
- 	top: 50%;
-	left: 35%;
-	position: absolute;
-}
-
-.MainH1{
-	font-size: 120px;
-	font-family: 'Dr Sugiyama', cursive;
-}
-
-.MainH2{
-	font-size: 50px;
-	font-family: 'Dr Sugiyama', cursive;
+.backgroundMain{
+	background: url("./../../images/cover.jpg") no-repeat center fixed;
+	background-size: cover;
+	height: 100vh;
 }
 
 .glyphicon {
     font-size: 50px;
-    margin-top: 50px;
     color: #486a7d;
+	position: absolute;
+    top: 58%;
+    left: 48%;
 }
+
+#MainHed{
+	padding: 200px 0 10px 0;
+	font-family: 'Dr Sugiyama', cursive;
+	font-size: 700%;
+}
+
+#MainDek{
+	margin: 10px 0 10px 0;
+	font-family: 'Dr Sugiyama', cursive;
+	font-size: 300%;
+
+}
+
+/*added coding to make background immage responsive and automatic fit*/
+
+/*.img-responsive {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}*/

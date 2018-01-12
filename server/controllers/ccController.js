@@ -17,6 +17,25 @@ mongoose.createConnection(
 module.exports = {
 
   //==========================================
+  // Search for a merchant by SearchBox:
+  //==========================================
+
+  findMerchantBySearchBox: function(req, res){
+    let minLat = req.params.minlat;
+    let maxLat = req.params.maxlat;
+    let minLng = req.params.minlng;
+    let maxLng = req.params.maxlng;
+
+    db.Cottage
+      .find({isMerchant: true,
+            latitude: {$gt: minLat, $lt: maxLat},
+            longitude:{$gt: minLng, $lt: maxLat}
+      })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
+  //==========================================
   // Cottage Routes:
   //==========================================
 
@@ -42,20 +61,49 @@ module.exports = {
   },
   findCottageById: function(req, res) {
     db.Cottage
-      .findById(req.params.id)
+      .find({email: req.query.id})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   updateCottage: function(req, res) {
     db.Cottage
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .findOneAndUpdate({ email: req.query.id }, req.query, {new: true})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   removeCottage: function(req, res) {
     db.Cottage
-      .findById({ _id: req.params.id })
+      .findById({ email: req.params.id })
       .then(dbModel => dbModel.remove())
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
+  findMerchantByZipAndFood: function(req, res){
+    let zip = req.params.zipCode;
+    let zipToSearch = new RegExp(zip, 'i');
+    let food = req.params.food;
+    let foodToSearch = new RegExp(food, 'i');
+    db.Cottage
+      .find({zipCode: zipToSearch, businessName: foodToSearch})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
+  findMerchantByZip: function(req, res){
+    let zip = req.params.zipCode;
+    let zipToSearch = new RegExp(zip);
+    db.Cottage
+      .find({zipCode: zipToSearch})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+
+  findMerchantByFood: function(req, res){
+    let food = req.params.food;
+    let foodToSearch = new RegExp(food, 'i');
+    db.Cottage
+      .find({businessName: foodToSearch})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

@@ -28,16 +28,18 @@ const cottageSeed = [
         longitude: -96.8124691,
         latitude: 32.8076949,
         phoneNumber:"214-214-2141",
-        firstName:"John", 
-        middleName:"Jonah", 
+        firstName:"John",
+        middleName:"Jonah",
         lastName:"Jameson",
+        category: ["Breads, rolls, biscuits", "tarts"],
+        inventory: ["Jams and Jellies","Dried Fruits","Marshmallow Pizza Sauce"],
         dateAdded: new Date(Date.now())
     },
     {
         userName: "Bashful",
         isMerchant: true,
         isActiveCustomer: false,
-        businessName: "Peter Porker, The Incredible Spider-Ham",
+        businessName: "Peter Porker, The Inedible Spider-Ham",
         website: "http://www.microsoft.com",
         email: "cottagetest2@cottageconnect.com",
         streetAddress1:"2727 Reagan Ave",
@@ -49,8 +51,11 @@ const cottageSeed = [
         longitude: -96.8132213,
         latitude: 32.8084522,
         phoneNumber:"214-412-1234",
-        firstName:"Peter", 
+        firstName:"Peter",
         lastName:"Parker",
+        category: "Breads, rolls, biscuits",
+        inventory: ["Jams and Jellies","Dried Fruits","Marshmallow Pizza Sauce"],
+
         dateAdded: new Date(Date.now())
     },
     {
@@ -68,8 +73,10 @@ const cottageSeed = [
         longitude: -97.1684998,
         latitude: 31.5742931,
         phoneNumber:"214-442-2334",
-        firstName:"Rhonda", 
+        firstName:"Rhonda",
         lastName:"Fonda",
+        category: "Breads, rolls, biscuits",
+        inventory: ["Jams and Jellies","Dried Fruits","Marshmallow Pizza Sauce"],
         dateAdded: new Date(Date.now())
     },
     {
@@ -83,12 +90,14 @@ const cottageSeed = [
         city: "Dallas",
         stateOrProvince: "TX",
         zipCode: "75287",
-        county: "Dallas",        
+        county: "Dallas",
         longitude: -96.7003721,
         latitude: 32.8703007,
         phoneNumber:"972-432-6742",
-        firstName:"Bob", 
+        firstName:"Bob",
         lastName:"Gambini",
+        category: "Breads, rolls, biscuits",
+        inventory: ["Jams and Jellies","Dried Fruits","Marshmallow Pizza Sauce"],
         dateAdded: new Date(Date.now())
     },
 
@@ -101,7 +110,7 @@ const cottageSeed = [
         stateOrProvince:"TX",
         longitude: -96.7969879,
         latitude: 32.7766642,
-        firstName:"Wanda", 
+        firstName:"Wanda",
         lastName:"Fish",
         dateAdded: new Date(Date.now())
     },
@@ -114,14 +123,16 @@ const cottageSeed = [
         website: "http://www.ojedas.com",
         email: "cottagetest6@cottageconnect.com",
         streetAddress1:"4123 Maple Ave.",
-        city: "Dallas", 
+        city: "Dallas",
         stateOrProvince: "TX",
         zipCode: "75219",
         longitude: -96.8171494,
         latitude: 32.8064639,
         phoneNumber:"214-528-4512",
-        firstName:"Alejandro", 
+        firstName:"Alejandro",
         lastName:"Ojeda",
+        category: "Unroasted nut butters",
+        inventory: ["Peanut Butter","Mazola Oil","Butter","Pepperoni"],
         dateAdded: new Date(Date.now())
     },
     {
@@ -130,7 +141,7 @@ const cottageSeed = [
         isActiveCustomer: false,
         businessName: "Curious Coffee",
         website: "",
-        email: "CuriousCoffee@cottageconnect.com",
+        email: "bfuller123@gmail.com",
         streetAddress1:"5414 Alton Ave",
         streetAddress2: "",
         city: "Dallas",
@@ -143,6 +154,8 @@ const cottageSeed = [
         firstName:"Albert",
         middleName:"Munich",
         lastName:"Munich",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Coffee"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -164,6 +177,8 @@ const cottageSeed = [
         firstName:"Bob",
         middleName:"Munich",
         lastName:"Belcher",
+        category: "Cakes",
+        inventory: ["Patty","Uranium Yellow","Ice Cream"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -185,6 +200,8 @@ const cottageSeed = [
         firstName:"Teddy",
         middleName:"Munich",
         lastName:"Spaghetti",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Italian Roast","Sumatra","Earl Gray"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -206,6 +223,8 @@ const cottageSeed = [
         firstName:"Mort",
         middleName:"Munich",
         lastName:"Mortician",
+        category: "Dry mixes",
+        inventory: ["Flour","Flowers","Fleur de Lee"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -227,6 +246,8 @@ const cottageSeed = [
         firstName:"Tina",
         middleName:"Munich",
         lastName:"Belcher",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -248,6 +269,8 @@ const cottageSeed = [
         firstName:"Felix",
         middleName:"Munich",
         lastName:"Fishoder",
+        category: "Candy",
+        inventory: ["Dried Brussel Sprouts"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -269,6 +292,8 @@ const cottageSeed = [
         firstName:"Calvin",
         middleName:"Munich",
         lastName:"Fishoder",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Hawiian Punch","Dandilion Wine Flavored Sumatra"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -290,6 +315,8 @@ const cottageSeed = [
         firstName:"Aziz",
         middleName:"Munich",
         lastName:"Ansari",
+        category: "Dehydrated fruit or vegetables, including dried beans",
+        inventory: ["Dried Apples","Crystalized Pineapple"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -311,6 +338,8 @@ const cottageSeed = [
         firstName:"Ron",
         middleName:"Ulysses",
         lastName:"Swanson",
+        category: "Popcorn and popcorn snacks",
+        inventory: ["Orville's"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -332,6 +361,8 @@ const cottageSeed = [
         firstName:"Tammy",
         middleName:"Munich",
         lastName:"Swanson",
+        category: "Breads, rolls, biscuits",
+        inventory: ["Egg","Bacon"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -353,6 +384,8 @@ const cottageSeed = [
         firstName:"Jimmy Jr",
         middleName:"Munich",
         lastName:"Pesto",
+        category: "Sweet breads, muffins",
+        inventory: ["Egg","Sausage","Bacon"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -374,6 +407,8 @@ const cottageSeed = [
         firstName:"Linda",
         middleName:"Munich",
         lastName:"Belcher",
+        category: "Cakes",
+        inventory: ["Egg","Spam"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -395,6 +430,8 @@ const cottageSeed = [
         firstName:"Louise",
         middleName:"Munich",
         lastName:"Belcher",
+        category: "Pastries",
+        inventory: ["Egg","Bacon","Spam"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -416,6 +453,8 @@ const cottageSeed = [
         firstName:"Zeke",
         middleName:"",
         lastName:"",
+        category: "Cookies",
+        inventory: ["Egg","Bacon","Sausage","Spam"],
         dateAdded: new Date(Date.now())
     },
     {
@@ -437,6 +476,8 @@ const cottageSeed = [
         firstName:"Tammy",
         middleName:"",
         lastName:"",
+        category: "Coated and uncoated nuts",
+        inventory: ["Spam","Bacon","Sausage","Spam"],
         dateAdded: new Date(Date.now())
     },{
         userName: "Nope",
@@ -457,6 +498,8 @@ const cottageSeed = [
         firstName:"Gerry",
         middleName:"",
         lastName:"Gergich",
+        category: "Unroasted nut butters",
+        inventory: ["Spam","Egg","Spam","Spam","Bacon","Spam"],
         dateAdded: new Date(Date.now())
     },
     {
@@ -478,6 +521,8 @@ const cottageSeed = [
         firstName:"Bruce",
         middleName:"",
         lastName:"Banner",
+        category: "Fruit butters",
+        inventory: ["Spam","Spam","Spam","Egg","Spam"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -499,6 +544,8 @@ const cottageSeed = [
         firstName:"Peter",
         middleName:"",
         lastName:"Parker",
+        category: "Fruit pies",
+        inventory: ["Spam","Spam","Spam","Spam","Spam","Spam","Baked Beans","Spam","Spam","Spam","Spam"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -520,6 +567,8 @@ const cottageSeed = [
         firstName:"Donald",
         middleName:"",
         lastName:"Blake",
+        category: "Dehydrated fruit or vegetables, including dried beans",
+        inventory: ["Lobster Thermidor aux Crevettes with a mornay sauce served in a Provencale manner with shallots and aubergines garnished with truffle pate, brandy and with a fried egg on top","Spam"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -604,6 +653,8 @@ const cottageSeed = [
         firstName:"Carol",
         middleName:"",
         lastName:"Danvers",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -625,6 +676,8 @@ const cottageSeed = [
         firstName:"Diana",
         middleName:"",
         lastName:"Prince",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -646,6 +699,8 @@ const cottageSeed = [
         firstName:"Tony",
         middleName:"",
         lastName:"Stark",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -667,6 +722,8 @@ const cottageSeed = [
         firstName:"Luke",
         middleName:"",
         lastName:"Cage",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -688,6 +745,8 @@ const cottageSeed = [
         firstName:"Dany",
         middleName:"",
         lastName:"Rand",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -709,6 +768,8 @@ const cottageSeed = [
         firstName:"Matt",
         middleName:"",
         lastName:"Murdock",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -730,6 +791,8 @@ const cottageSeed = [
         firstName:"Kitty",
         middleName:"",
         lastName:"Pryde",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -751,6 +814,8 @@ const cottageSeed = [
         firstName:"Kurt",
         middleName:"",
         lastName:"Wagner",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -772,6 +837,8 @@ const cottageSeed = [
         firstName:"Peter",
         middleName:"",
         lastName:"Rasputin",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -793,6 +860,8 @@ const cottageSeed = [
         firstName:"Barbara",
         middleName:"",
         lastName:"Morse",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -814,6 +883,8 @@ const cottageSeed = [
         firstName:"Molly",
         middleName:"",
         lastName:"Hayes",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -835,6 +906,8 @@ const cottageSeed = [
         firstName:"Chuck",
         middleName:"",
         lastName:"Xavier",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -856,6 +929,8 @@ const cottageSeed = [
         firstName:"Noran",
         middleName:"",
         lastName:"Radd",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -877,6 +952,8 @@ const cottageSeed = [
         firstName:"Oliver",
         middleName:"",
         lastName:"Queen",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -898,6 +975,8 @@ const cottageSeed = [
         firstName:"Selina",
         middleName:"",
         lastName:"Kyle",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -919,6 +998,8 @@ const cottageSeed = [
         firstName:"Barry",
         middleName:"",
         lastName:"Allen",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -940,6 +1021,8 @@ const cottageSeed = [
         firstName:"Victor",
         middleName:"",
         lastName:"Stone",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -961,6 +1044,8 @@ const cottageSeed = [
         firstName:"Kal",
         middleName:"Clark",
         lastName:"El",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -982,6 +1067,8 @@ const cottageSeed = [
         firstName:"Bruce",
         middleName:"",
         lastName:"Wayne",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -1003,6 +1090,8 @@ const cottageSeed = [
         firstName:"Alfred",
         middleName:"",
         lastName:"Pennyworth",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -1024,6 +1113,8 @@ const cottageSeed = [
         firstName:"Hal",
         middleName:"",
         lastName:"Jordan",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -1045,6 +1136,8 @@ const cottageSeed = [
         firstName:"Walter",
         middleName:"",
         lastName:"Kovacs",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -1066,6 +1159,8 @@ const cottageSeed = [
         firstName:"Cassandra",
         middleName:"",
         lastName:"Cain",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
         {
@@ -1087,6 +1182,8 @@ const cottageSeed = [
         firstName:"Jon",
         middleName:"",
         lastName:"Osterman",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
         },
       {
@@ -1108,6 +1205,8 @@ const cottageSeed = [
         firstName:"Aimee",
         middleName:"",
         lastName:"Black",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
       },
        {
@@ -1129,6 +1228,8 @@ const cottageSeed = [
         firstName:"Brian",
         middleName:"",
         lastName:"Stevens",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -1150,6 +1251,8 @@ const cottageSeed = [
         firstName:"Jaimee",
         middleName:"",
         lastName:"",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
       },
        {
@@ -1171,6 +1274,8 @@ const cottageSeed = [
         firstName:"Piper",
         middleName:"",
         lastName:"Harris",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
       },
        {
@@ -1192,6 +1297,8 @@ const cottageSeed = [
         firstName:"Spencer",
         middleName:"",
         lastName:"Jefferson",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
       },
       {
@@ -1213,6 +1320,8 @@ const cottageSeed = [
         firstName:"",
         middleName:"",
         lastName:"",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
       },
         {
@@ -1234,6 +1343,8 @@ const cottageSeed = [
         firstName:"Oliver",
         middleName:"",
         lastName:"Smith",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
       },
        {
@@ -1255,6 +1366,8 @@ const cottageSeed = [
         firstName:"Monica",
         middleName:"",
         lastName:"Geller",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
       },
        {
@@ -1276,6 +1389,8 @@ const cottageSeed = [
         firstName:"Craig",
         middleName:"",
         lastName:"Webber",
+        category: "Roasted coffee or dry tea",
+        inventory: ["Sanka","Lipton"],
         dateAdded: new Date(Date.now())
       }
 
@@ -1292,4 +1407,3 @@ db.Cottage
     console.error(err);
     process.exit(1);
 });
-

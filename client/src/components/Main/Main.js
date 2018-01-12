@@ -1,29 +1,30 @@
 import React, { Component } from "react";
 import "./Main.css";
-import Background from "./../../images/cover2.jpg";
-
-var mainStyle = {
-  width: "100%",
-  height: "1000px",
-  backgroundImage: "url(" + Background + ")",
-};
 
 class MainTwo extends Component {
   render() {
     return (
-      <section style={ mainStyle }>
+      <div className="backgroundMain">
+      <br />
+       <br />
+        <br />
+         <br />  
+          <br />
+           <br /> 
         <div className="row">
-          <div className="MainHeads">
-            <h1 className="MainH1">Cottage Connect</h1>
-            <h2 className="MainH2">Uniting people with homemade products</h2>
-              <div className="container-fluid text-center">
-                <a href="/#About" title="To About">
-                <span className="glyphicon glyphicon-circle-arrow-down"></span></a>
-
-              </div>
+        
+          <div className="container-fluid text-center col-lg-12 col-md-12 col-sm-12">
+              <h1 id="MainHed">Cottage Connect</h1>
+              <h2 id="MainDek">Uniting people with homemade products</h2>
+          </div>
+        </div>      
+        <div className="row">
+          <div className="container-fluid text-center col-lg-12 col-md-12 col-sm-12">
+            <a href="/#About" title="To About">
+            <span className="glyphicon glyphicon-circle-arrow-down"></span></a>
           </div>
         </div>
-      </section>
+      </div>
     );
   }
 }

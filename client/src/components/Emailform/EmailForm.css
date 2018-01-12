@@ -1,0 +1,41 @@
+.invisible {
+  display: none;
+}
+
+.wholeEmail{
+    background-color: #fede8a;
+    margin-top: 6px;
+}
+
+#emailHede{
+	margin-top: 20px;
+}
+
+#emailBody {
+  height: 25vh;
+  width: 50%;
+}
+
+#emailForm {
+  margin-left: 33%;
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+
+#emailForm>h2{
+  margin-left: 10%;
+}
+
+#emailSubject {
+  width: 32.8%;
+}
+
+#toast {
+  position: absolute;
+  margin-top: -20%;
+  background-color: #fede8a;
+  width: 100%;
+  font-size: 400%;
+  text-align: center;
+}

@@ -22,6 +22,7 @@ class Card extends React.Component {
           <h4 className="cardAddress">{this.props.address}</h4>
         </div>
       </div>
+      <button onClick={this.props.clickHandler} data-id={this.props.businessId} data-name={this.props.name} className="smallButton">Contact</button>
     </div>
 
     )

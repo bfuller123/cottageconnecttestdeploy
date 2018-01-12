@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
-const herokuMongoURI = 'mongodb://heroku_wkwxbdvp:rb7p43plsgl2updmho1hvh77d1@ds239387.mlab.com:39387/heroku_wkwxbdvp';
+const herokuMongoURI = 'mongodb://heroku_bx92v1q4:f6lvg45a5ulejd6mtdl6epq04u@ds161048.mlab.com:61048/heroku_bx92v1q4';
 
 module.exports.connect = (uri) => {
 
   //if this doesn't work, delete uri = herokuMongoURI;
-  uri = herokuMongoURI;
+  // uri = herokuMongoURI;
   mongoose.connect(uri);
   // plug in the promise library:
   mongoose.Promise = Promise;
